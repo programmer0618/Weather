@@ -14,7 +14,7 @@ const getWeatherData = async function(city){
     loading.style.display = "none"
 
     card.innerHTML = `
-    <img src="../img/weather.webp" class="card-img-top" alt="#" style="width: 100px; height: 100px; margin: auto;">
+    <img src="./img/weather.webp" class="card-img-top" alt="#" style="width: 100px; height: 100px; margin: auto;">
     <div class="card-body">
       <h2 class="card-title m-auto text-center fw-bold" style="font-size: 20px; font-weight: bold; text-align: center;">${data.location.name}, ${data.location.country}</h2>
       <h3 class="card-title m-auto text-center mt-2 fw-bold">${data.current.condition.text}</h3>
