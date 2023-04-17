@@ -11,6 +11,7 @@ const getWeatherData = async function(city){
     const weather = await fetch(`https://api.weatherapi.com/v1/current.json?key=${API_KEY}%20&q=${city}&aqi=no`);
     const data = await weather.json();
    
+   setTimeout(() => {
     loading.style.display = "none"
 
     card.innerHTML = `
@@ -20,6 +21,7 @@ const getWeatherData = async function(city){
       <h3 class="card-title m-auto text-center mt-2 fw-bold">${data.current.condition.text}</h3>
       <h5 class="card-text text-center display-5 fw-lighter">Tempratura ${data.current.temp_c} °C</h5>        
     </div>`;
+   }, 500);
    
 }
 
